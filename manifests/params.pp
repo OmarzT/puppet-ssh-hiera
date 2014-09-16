@@ -10,8 +10,8 @@ class ssh::params {
     $listen_address     = "0.0.0.0"
     $hostaliases        = undef
 
-    $users              = {}
-    $groups             = {}
+    $users = hiera_hash('ssh_users')
+    $groups = hiera_hash('ssh_groups')
 
     $options            = {}
 

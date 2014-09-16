@@ -79,8 +79,8 @@ class ssh (
     $manage_hostkey     = params_lookup('manage_hostkey'),
     $hostkey_name       = params_lookup('hostkey_name'),
     $hostaliases        = params_lookup('hostaliases'),
-    $users              = params_lookup('users'),
-    $groups             = params_lookup('groups'),
+    $users              = params_lookup('users', local, hash),
+    $groups             = params_lookup('groups', local, hash),
     $service_name       = params_lookup('service_name'),
     $options            = params_lookup('options')
 
